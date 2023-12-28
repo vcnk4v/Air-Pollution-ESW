@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Pollution Dashboard</title>
+  <link rel="stylesheet" href="dash.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <!-- <link rel="stylesheet" href="semicircle.css" /> -->
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo"><img src="logo.png"></div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="realtime.html">Real-time Data</a></li>
+        <li><a href="historical.html">Historical Data</a></li>
+        <li><a href="prediction.html">Prediction</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="box">
+    <div>
+      <h2>PM 2.5</h2>
+      <p id="latest25">Loading latest data...</p>
+    </div>
+    <div>
+      <h2>PM 10</h2>
+      <p id="latest10">Loading latest data...</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <div>
+      <h2>Temperature</h2>
+      <p id="latesttemp">Loading latest data...</p>
+    </div>
+    <div>
+      <h2>Humidity</h2>
+      <p id="latesthum">Loading latest data...</p>
+    </div>
+  </div>
+  <!-- <div role="progressbar" aria-valuenow="75" aria-valu a-valuemax="100" style="--value: 75"></div> -->
+
+  <script src="realtime.js"></script>
+</body>
+
+</html>

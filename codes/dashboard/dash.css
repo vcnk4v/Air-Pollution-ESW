@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    padding:0;
+    background:url('https://www.torocloud.com/hubfs/pattern-dark-Oct-18-2023-12-31-43-0423-AM.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+    
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    /* margin: 0 ; */
+    margin-top: 5%;
+    margin-left:7%;
+  }
+  
+  .box > div {
+    width: 40%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: lavenderblush;
+    border-radius: 10px;
+  }
+  

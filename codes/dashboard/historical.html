@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature vs. Timestamp Chart</title>
+    <link rel="stylesheet" href="historical.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><img src="logo.png"></div>        
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="realtime.html">Real-time Data</a></li>
+          <li><a href="historical.html">Historical Data</a></li>
+          <li><a href="prediction.html">Prediction</a></li>          
+        </ul>
+      </nav>
+    </header>
+    <div class="date-range">
+      <button id="lastDayButton">Last Day</button>
+      <button id="lastWeekButton">Last Week</button>
+      <button id="lastMonthButton">Last Month</button>
+    </div>
+    <div id="pmGauge"></div>
+
+    <h1>Temperature</h1>
+    <div class="container">
+      <canvas id="temperatureChart"></canvas>
+    </div>
+    <h1>Humidity</h1>
+    <div class="container">
+      <canvas id="humidityChart"></canvas>
+    </div>
+    <h1>PM 2.5</h1>
+    <div class="container">
+      <canvas id="pm25chart"></canvas>
+    </div>
+    <h1>PM 10</h1>
+    <div class="container">
+      <canvas id="pm10chart"></canvas>
+    </div>
+    <div id="pm2.5-gauge"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="historical.js"></script>
+  </body>
+</html>

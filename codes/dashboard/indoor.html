@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Pollution Dashboard</title>
+    <link rel="stylesheet" href="indoor.css" />
+    <link rel="stylesheet" href="nav.css" />    
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><img src="logo.png"></div>        
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="indoor.html">Indoor Pollution</a></li>
+          <li><a href="outdoor.html">Outdoor Pollution</a></li>         
+        </ul>
+      </nav>
+    </header>
+      <div class="Latest-readings">
+        <h1>Indoor Real-Time Data</h1>
+        <div class="reading-box">
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/258/436/original/environment-pollution-graphic-clipart-design-free-png.png">
+                <p id="latest25">PM2.5 Reading: </p>
+            </div>
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/258/364/original/environment-pollution-graphic-clipart-design-free-png.png">
+                <p id="latest10">PM10 Reading: </p>
+            </div>
+            <div class="box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3262/3262966.png">
+                <p id="latesthum">Humidity Reading: </p>
+            </div>
+            <div class="box">
+                <img src="https://www.transparentpng.com/thumb/temperature/climate-control-home-temperature-png-17.png">
+                <p id="latesttemp">Temperature Reading:</p>
+            </div>
+        </div>
+        <h2>Sensor Readings and Graphs</h2>
+        <div class="graph-box">            
+            <div class="graph1">
+                <p style="font-weight: bold;margin: 5px 0;">PM Data</p>
+                <p style="margin: 5px 0;">--------------------------------------</p>
+                <div class="date-range">
+                    <button id="lastDayButtonPM">Last Day</button>
+                    <button id="lastWeekButtonPM">Last Week</button>
+                    <button id="lastMonthButtonPM">Last Month</button>
+                </div>
+                <canvas id="combinedChart"></canvas>
+                <div class="bestworst">
+                  <p>PM2.5</p>
+                  <div class="best">
+                    <p id="best25">Best Value</p>
+                  </div>
+                  <div class="worst">
+                    <p id="worst25">Worst Value</p>
+                  </div>
+                </div>
+                <div class="bestworst">
+                  <p>PM10</p>
+                  <div class="best">
+                    <p id="best10">Best Value</p>
+                  </div>
+                  <div class="worst">
+                    <p id="worst10">Worst Value</p>
+                  </div>
+                </div>
+                <div class="average">
+                  <p id="avg25">Average value of PM2.5</p>
+                  <p id="avg10">Average value of PM10</p>
+                </div>
+                <p style="font-size: 10px;">**Note: Any negetive value plooted in the graph indicates sensor failure and is not considered in data analysis.</p>
+
+            </div>            
+            <div class="graph1">
+              <p style="font-weight: bold;margin: 5px 0;">Humidity Data</p>
+              <p style="margin: 5px 0;">--------------------------------------</p>
+                <div class="date-range">
+                    <button id="lastDayButtonH">Last Day</button>
+                    <button id="lastWeekButtonH">Last Week</button>
+                    <button id="lastMonthButtonH">Last Month</button>
+                </div>
+                <canvas id="humidityChart"></canvas>
+                <div class="average">
+                  <p id="lowhum">Lowest value: </p>
+                  <p id="highhum">Highest value: </p>
+                  <p id="avghum">Average value: </p>
+                </div>
+                <p style="font-size: 10px;">**Note: Any negetive value plooted in the graph indicates sensor failure and is not considered in data analysis.</p>
+            </div>
+            <div class="graph1">
+              <p style="font-weight: bold;margin: 5px 0;">Temperature Data</p>
+              <p style="margin: 5px 0;">--------------------------------------</p>
+                <div class="date-range">
+                    <button id="lastDayButtonT">Last Day</button>
+                    <button id="lastWeekButtonT">Last Week</button>
+                    <button id="lastMonthButtonT">Last Month</button>
+                </div>
+                <canvas id="temperatureChart"></canvas>              
+                <div class="average">
+                  <p id="lowtemp">Lowest value: </p>                
+                  <p id="hightemp">Highest value: </p>
+                  <p id="avgtemp">Average value: </p>
+                </div>
+                <p style="font-size: 10px;">**Note: Any negetive value plooted in the graph indicates sensor failure and is not considered in data analysis.</p>
+            </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="indoor.js"></script>
+    
+  </body>
